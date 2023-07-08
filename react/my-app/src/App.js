@@ -1,12 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import {PostComponent} from "./components/PostCompoment/PostComponent";
+const App=()=> {
   return (
     <>
-      <div>
-        hello
-      </div>
+        <PostComponent/>
     </>
   );
 }
