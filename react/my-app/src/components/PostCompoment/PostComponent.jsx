@@ -12,10 +12,9 @@ export const PostComponent=()=>{
     },[])
      return(
          <div>
-             return(
                 {posts.map((post)=><Post key={post.id} post={post}/>
                 )}
-             )
+
 
          </div>
      )
