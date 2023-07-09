@@ -10,8 +10,8 @@ const App=()=> {
     <>
         {/*<PostComponent/>*/}
         {/*<FlightComponent/>*/}
-        {<Users setUserId={setUserId}/>}
-        {userId&&<Posts userId={userId}/>}
+        {/*{<Users setUserId={setUserId}/>}*/}
+        {/*{userId&&<Posts userId={userId}/>}*/}
     </>
   );
 }
