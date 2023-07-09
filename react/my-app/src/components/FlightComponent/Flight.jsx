@@ -1,14 +1,13 @@
-import {useState} from "react";
-
+import styles from './Flight.module.css'
 export const Flight=({flight})=>{
-    const[show,setShow]=useState([])
-    const {mission_name,launch_year,mission_patch_small}=flight;
-    return(
-        <>
-            <div>mission name: {mission_name}</div>
-            <div>launch year: {launch_year}</div>
-            <div>small patch:{mission_patch_small}
-            </div>
-        </>
-    )
+    const {mission_name,launch_year,links:{mission_patch_small}}=flight;
+            return(
+                <div className={styles.place}>
+                    <div>mission name: {mission_name}</div>
+                    <div>launch year: {launch_year}</div>
+                    <div className={styles.image}>
+                        <img src={mission_patch_small} alt="Зображення" />
+                    </div>
+                </div>
+            )
 }

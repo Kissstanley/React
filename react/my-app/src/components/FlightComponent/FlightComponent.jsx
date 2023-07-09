@@ -8,7 +8,10 @@ export const FlightComponent=()=> {
     useEffect(() => {
         fetch('https://api.spacexdata.com/v3/launches/')
             .then(res => res.json())
-            .then(flights => setFlights(flights))
+            .then(flights => {
+                const filtered=flights.filter(value=>value.launch_year!=='2020')
+                setFlights(filtered)
+            })
             .catch()
     }, [])
     return(
