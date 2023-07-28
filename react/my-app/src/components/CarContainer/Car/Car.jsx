@@ -1,14 +1,16 @@
-export const Car=({car,setOnSave,setUpdatedCar})=>{
+import {CarService} from "../../../services/CarService";
+import {useContext} from "react";
+import {Context} from "../CarContainer";
+
+export const Car=({car})=>{
+    const {setUpdatedCar,setOnSave}=useContext(Context)
     const {id,brand,price,year}=car
 
-    const deleteCar=()=>{
-        fetch(`http://owu.linkpc.net/carsAPI/v1/cars/${id}`,{
-            method:'DELETE'
-        })
-            .then(()=>{
-                setOnSave(prev=>!prev)
-            })
+    const deleteCar=async ()=>{
+        await CarService.deleteById(id)
+        setOnSave()
     }
+
 
     return(
         <div>

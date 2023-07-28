@@ -1,11 +1,10 @@
 import {Post} from "../Post/Post";
 import {useEffect} from "react";
+import {PostService} from "../../../services/PostService";
 
 export const Posts=({posts,setPosts})=>{
     useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(posts=>posts.json())
-            .then(posts=>setPosts(posts))
+        PostService.loadData(setPosts)
     },[])
     return(
         <div>
