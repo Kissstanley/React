@@ -1,11 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import {TestUseMemo} from "./Components/TestUseMemo";
+import {Thing} from "./Components/Thing";
+import {TestUseArray} from "./Components/TestUseArray";
 
 function App() {
   return (
     <>
       <div>
-        hello
+        {/*<TestUseMemo/>*/}
+          {/*<Thing/>*/}
+          <TestUseArray/>
       </div>
     </>
   );
