@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import CarContainer from "./Components/CarContainer/CarContainer";
 
 function App() {
   return (
     <>
       <div>
-        hello
+        <CarContainer/>
       </div>
     </>
   );
